@@ -182,10 +182,10 @@ nav.scrolled {
     -45deg,
     transparent,
     transparent 58px,
-    rgba(255, 255, 255, 0.022) 58px,
-    rgba(255, 255, 255, 0.022) 60px
+    rgba(255, 255, 255, 0.011) 58px,
+    rgba(255, 255, 255, 0.011) 59px
   );
-  opacity: 0.96;
+  opacity: 0.9;
   animation: rainfallDrift 16s linear infinite;
 }
 
@@ -194,10 +194,10 @@ nav.scrolled {
     -45deg,
     transparent,
     transparent 108px,
-    rgba(46, 204, 142, 0.048) 108px,
-    rgba(46, 204, 142, 0.048) 111px
+    rgba(46, 204, 142, 0.03) 108px,
+    rgba(46, 204, 142, 0.03) 110px
   );
-  opacity: 0.78;
+  opacity: 0.65;
   animation: rainfallDriftFast 8s linear infinite;
 }
 
@@ -255,7 +255,18 @@ h1 em {
   color: var(--muted);
   line-height: 1.82;
   max-width: 460px;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
+}
+
+.hero-founder {
+  font-size: 0.86rem;
+  color: var(--muted);
+  margin-bottom: 28px;
+}
+
+.hero-founder span {
+  color: var(--white);
+  font-weight: 600;
 }
 
 .hero-actions {
