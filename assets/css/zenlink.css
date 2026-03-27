@@ -64,7 +64,7 @@ nav.scrolled {
 .nav-logo-link {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 8px;
   text-decoration: none;
 }
 
