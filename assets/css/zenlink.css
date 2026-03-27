@@ -182,10 +182,10 @@ nav.scrolled {
     -45deg,
     transparent,
     transparent 58px,
-    rgba(255, 255, 255, 0.011) 58px,
-    rgba(255, 255, 255, 0.011) 59px
+    rgba(255, 255, 255, 0.022) 58px,
+    rgba(255, 255, 255, 0.022) 60px
   );
-  opacity: 0.9;
+  opacity: 0.96;
   animation: rainfallDrift 16s linear infinite;
 }
 
@@ -194,10 +194,10 @@ nav.scrolled {
     -45deg,
     transparent,
     transparent 108px,
-    rgba(46, 204, 142, 0.03) 108px,
-    rgba(46, 204, 142, 0.03) 110px
+    rgba(46, 204, 142, 0.048) 108px,
+    rgba(46, 204, 142, 0.048) 111px
   );
-  opacity: 0.65;
+  opacity: 0.78;
   animation: rainfallDriftFast 8s linear infinite;
 }
 
