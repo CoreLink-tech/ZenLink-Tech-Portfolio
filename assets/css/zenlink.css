@@ -39,6 +39,47 @@ body {
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: -18%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::before {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 58px,
+    rgba(255, 255, 255, 0.011) 58px,
+    rgba(255, 255, 255, 0.011) 59px
+  );
+  opacity: 0.9;
+  animation: rainfallDrift 16s linear infinite;
+}
+
+body::after {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 108px,
+    rgba(46, 204, 142, 0.03) 108px,
+    rgba(46, 204, 142, 0.03) 110px
+  );
+  opacity: 0.65;
+  animation: rainfallDriftFast 8s linear infinite;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
 }
 
 nav {
@@ -165,20 +206,6 @@ nav.scrolled {
   background:
     radial-gradient(ellipse at top right, rgba(46, 204, 142, 0.055) 0%, transparent 38%),
     radial-gradient(ellipse at bottom left, rgba(224, 122, 58, 0.038) 0%, transparent 34%);
-}
-
-#hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: repeating-linear-gradient(
-    -45deg,
-    transparent,
-    transparent 58px,
-    rgba(255, 255, 255, 0.011) 58px,
-    rgba(255, 255, 255, 0.011) 59px
-  );
-  pointer-events: none;
 }
 
 #hero > * {
@@ -899,7 +926,33 @@ footer {
   transition-delay: 0.26s;
 }
 
+@keyframes rainfallDrift {
+  from {
+    transform: translate3d(0, -4%, 0);
+    background-position: 0 0;
+  }
+
+  to {
+    transform: translate3d(-5%, 10%, 0);
+    background-position: -180px 320px;
+  }
+}
+
+@keyframes rainfallDriftFast {
+  from {
+    transform: translate3d(1%, -10%, 0);
+    background-position: 0 0;
+  }
+
+  to {
+    transform: translate3d(-7%, 14%, 0);
+    background-position: -260px 520px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
+  body::before,
+  body::after,
   .hero-content > *,
   .reveal,
   .hero-visual {
